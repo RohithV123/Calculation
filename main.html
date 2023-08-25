@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Amazon cart item incrementer</title>
+    </head>
+    <body>
+<label style="text-align: center;" id="number">0</label><br>
+<button style="background-color: blueviolet;" id="A">+</button>
+<button style="background-color: black;" id="R">R</button>
+<button style="background-color: aqua;" id="S">-</button>
+<br>
+<label style="text-align: center;" id="number2">0</label><br>
+<button style="background-color: blueviolet;" id="A2">+</button>
+<button style="background-color: black;" id="R2">R</button>
+<button style="background-color: aqua;" id="S2">-</button><br>
+<label style="text-align: center;" id="number3">Result</label><br>
+<button style="background-color: green;" id="F">+</button>
+<button style="background-color: green;" id="F1">-</button>
+<button style="background-color: green;" id="F2">*</button>
+<button style="background-color: green;" id="F3">/</button>
+<script>
+    let num=0
+document.getElementById("A").onclick=function(){
+    console.log("Add was Clicked")
+    num=num+1
+    console.log(num)
+    document.getElementById("number").innerHTML=num
+}
+document.getElementById("R").onclick=function(){
+    console.log("Reset was Clicked")
+    num=0
+    console.log(num)
+    document.getElementById("number").innerHTML=num
+}
+document.getElementById("S").onclick=function(){
+    console.log("Sub was Clicked")
+    num=num-1
+    console.log(num)
+    document.getElementById("number").innerHTML=num
+    if(num<0){
+        document.getElementById("number").innerHTML="Error"
+    }
+    else if(num==2)
+    console.log("U hav chosen 2")
+}
+let num2=0
+document.getElementById("A2").onclick=function(){
+    console.log("Add was Clicked")
+    num2=num2+1
+    console.log(num2)
+    document.getElementById("number2").innerHTML=num2
+}
+document.getElementById("R2").onclick=function(){
+    console.log("Reset was Clicked")
+    num2=0
+    console.log(num2)
+    document.getElementById("number2").innerHTML=num2
+}
+document.getElementById("S2").onclick=function(){
+    console.log("Sub was Clicked")
+    num2=num2-1
+    console.log(num2)
+    document.getElementById("number2").innerHTML=num2
+    if(num2<0){
+        document.getElementById("number2").innerHTML="Error"
+    }
+    else if(num2==2)
+    console.log("U hav chosen 2")
+}
+document.getElementById("F").onclick=function(){
+    document.getElementById("number3").innerHTML=(num+num2)
+}
+document.getElementById("F1").onclick=function(){
+    document.getElementById("number3").innerHTML=(num-num2)
+}
+document.getElementById("F2").onclick=function(){
+    document.getElementById("number3").innerHTML=(num*num2)
+}
+document.getElementById("F3").onclick=function(){
+    document.getElementById("number3").innerHTML=(num/num2)
+}
+
+</script>
+</body>
+</html>
